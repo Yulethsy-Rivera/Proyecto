@@ -6,7 +6,6 @@ if (formulario && mensajeAlerta) {
     formulario.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        // Validaciones previas que ya tenías
         const nombre = document.getElementById('nombre').value.trim();
         const apellido = document.getElementById('apellido').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -295,9 +294,6 @@ if (menuCategorias && flechaIzq && flechaDer) {
     });
 }
 
-// Nota: Eliminamos el código anterior que dejaba los botones azules permanentemente,
-// ahora el CSS (.btn-categoria:active) se encarga de dar el color solo al presionar.
-
 // ==========================================
 // CURIOSIDADES DINÁMICAS CADA 1 MINUTO
 // ==========================================
@@ -328,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300);
         }
 
-        // Cambia de texto cada 30 segundos (30000 milisegundos)
+        // Cambia de texto cada 10 segundos (10000 milisegundos)
         setInterval(cambiarCuriosidad, 10000);
     }
 });
@@ -338,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. LÓGICA PARA LOS BOTONES DE ENTREGA
+    //  LÓGICA PARA LOS BOTONES DE ENTREGA
     const botonesEntrega = document.querySelectorAll('.btn-entrega');
     const contenedorDireccion = document.getElementById('contenedor-direccion');
     const inputDireccion = document.getElementById('input-direccion');
@@ -375,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Agarra el botón de WhatsApp y hace que funcione al hacerle clic.
-    // 2. LÓGICA DEL BOTÓN DE WHATSAPP
+    // LÓGICA DEL BOTÓN DE WHATSAPP
     const configurarBotonWhatsApp = () => {
         const btnWhatsapp = document.getElementById('btn-whatsapp');
         if (btnWhatsapp && !btnWhatsapp.hasAttribute('data-activo')) {
@@ -418,15 +414,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     totalGeneral += subtotalItem;
                     // Listamos los productos sin asteriscos
                     mensaje += `${item.cantidad}x ${item.nombre}\n`;
-                    // Opcional: si quieres que muestre el precio por ítem, descomenta la siguiente línea
-                    // mensaje += `   (Subtotal: $${subtotalItem.toLocaleString()})\n`;
+            
                 });
                 mensaje += `-----------------------------------\n`;
                 mensaje += `TOTAL A PAGAR: $${totalGeneral.toLocaleString()}\n`;
                 mensaje += `-----------------------------------\n`;
                 mensaje += `¡Muchas gracias!`;
 
-                // 4. Codificamos el mensaje para la URL
+                // Codificamos el mensaje para la URL
                 let mensajeCodificado = encodeURIComponent(mensaje);
                 let urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`;
 
