@@ -644,25 +644,30 @@ p {
 }
 .footer-sitio {
     width: 100%;
-    max-width: 1200px;
+    background-color: #3d1c06; /* Tono café oscuro elegante */
     text-align: center;
     margin-top: 60px;
-    padding-top: 35px;
-    border-top: 2px solid #e0dcd3
+    padding: 40px 20px 30px 20px;
+    border-top: 3px solid #d4a373; /* Línea dorada/cálida sutil arriba */
+    box-shadow: inset 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 }
 
 .footer-sitio p {
     font-size: 14px;
-    color: #64748b;
-    margin-bottom: 10px
+    color: #f1e3d3; /* Texto claro para hacer contraste */
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.footer-sitio strong {
+    color: #fca311; /* Resalta los nombres en un dorado suave */
 }
 
 .footer-copy {
     font-size: 12px;
-    color: #a89f95;
-    margin-bottom: 0
+    color: #b09e91; /* Tono más suave para el copyright */
+    margin-bottom: 0;
 }
-
 @media (max-width:768px) {
 
     .contenedor-principal,.contenedor-principal2 {
@@ -903,4 +908,18 @@ p {
         width: 100%;
         box-sizing: border-box
     }
+    .footer-sitio {
+    width: 100%;
+    margin-top: 40px;
+    padding: 30px 15px 20px 15px;
+}
 
+.footer-sitio p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.footer-copy {
+    font-size: 11px;
+}
+}
