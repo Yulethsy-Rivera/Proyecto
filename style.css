@@ -169,6 +169,7 @@ p {
     gap: 25px;
     width: 100%;
     max-width: 1200px
+    margin-top: 70px;
 }
 
 .titulo-precio {
@@ -264,18 +265,19 @@ p {
 }
 
 .contenedor-carrusel {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 100;
+    background-color: #ffffff; 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 100%;
-    margin-bottom: 40px;
-    padding-top: 10px
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #ffffff; /* Evita transparencias con las tarjetas al bajar */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 0px;
+    padding-top: 12px 10px
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .menu-categorias {
